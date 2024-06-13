@@ -1,0 +1,5 @@
+
+.form-control:focus, .form-select:valid:focus{
+    color: #c2c2c2;
+}  
+
