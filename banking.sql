@@ -199,7 +199,6 @@ INSERT INTO `user` (`id`, `user_name`, `email`, `user_role`, `password`) VALUES
 (2, 'rono23', 'rono23@gmail.com', 'root_admin', 'e10adc3949ba59abbe56e057f20f883e'),
 (5, 'Mohid', 'mohid@gmail.com', 'general', 'e10adc3949ba59abbe56e057f20f883e'),
 (14, 'maya', 'bini@gmail.com', 'general', 'e10adc3949ba59abbe56e057f20f883e'),
-(15, 'Kala', 'kala@gmail.com', 'general', 'c86038fe04bc7097e218b4fd6b767f');
 
 -- --------------------------------------------------------
 
