@@ -1,7 +1,7 @@
 <!-- footer -->
     <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-white d-block text-center text-sm-left d-sm-inline-block">Copyright © South11</span>
+              <span class="text-muted text-white d-block text-center text-sm-left d-sm-inline-block">Copyright © Ranajit</span>
             </div>
     </footer>
           <!-- footer end -->

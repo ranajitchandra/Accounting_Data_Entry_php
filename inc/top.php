@@ -4,7 +4,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SOUTH11 Admin</title>
+    <title>
+      <?php
+					$conn = mysqli_connect("localhost", "root", "", "banking");
+					
+					$u_sql = "SELECT * FROM dev_tool";
+					$u_query = mysqli_query($conn, $u_sql);
+					if($row=mysqli_fetch_assoc($u_query)){
+						echo $row["big_title"];
+					}
+				?> Dashboard
+    </title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
