@@ -8,9 +8,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-DROP DATABASE IF EXISTS `banking`;
-CREATE DATABASE `banking` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `banking`;
+-- DROP DATABASE IF EXISTS `banking`;
+-- CREATE DATABASE `banking` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+-- USE `banking`;
 
 -- -------------------------
 -- Table structure for costing
