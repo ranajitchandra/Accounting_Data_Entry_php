@@ -23,9 +23,11 @@
     <!-- End Plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
-    <!-- Layout styles -->
+        <!-- Layout styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="mycustom.css">
+    <link rel="stylesheet" href="dashboard_styles.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+        <link rel="shortcut icon" href="assets/images/favicon.png" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
