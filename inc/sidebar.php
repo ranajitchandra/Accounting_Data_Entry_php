@@ -16,7 +16,7 @@
           	</a>
           	<a class="sidebar-brand brand-logo-mini" href="Dashboard.php">
             
-            <h1 class="text-white text-decoration-none">S</h1></a>
+            <h1 class="text-white text-decoration-none">R</h1></a>
 
         </div>
 		<?php
