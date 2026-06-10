@@ -1,13 +1,9 @@
 <?php
-    // Create connection
     $conn = mysqli_connect("localhost", "root", "", "banking");
 
-    // Check connection
+    if (!$conn) {
+        die("Database connection failed: " . mysqli_connect_error());
+    }
 
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
-    //     }
-    //         echo "Connected successfully";
-    
-    
+    mysqli_set_charset($conn, "utf8mb4");
 ?>

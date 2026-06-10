@@ -22,7 +22,7 @@
                 }elseif(!empty($_SESSION["user_role"] == "root_admin")){
 				header("location: dashboard.php");
 			    }else{
-			        echo "You no access";
+			        echo "You have no access";
 			    }
         }else {
             echo "<script>window.alert('Your Login Name or Password is invalid'); </script>";
