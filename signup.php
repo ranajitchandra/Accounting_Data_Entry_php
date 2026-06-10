@@ -1,3 +1,44 @@
+<?php
+	session_start();
+	include_once "db/db.php";
+
+	if(isset($_POST["register"])){
+		$name = $_POST["username"];
+		$email = $_POST["email"];
+		$password = md5($_POST["password"]);
+
+		if($name){
+			$msg_sql = "SELECT * FROM user WHERE user_name = '$name';";
+			$msg_query = mysqli_query($conn, $msg_sql);
+			if(mysqli_num_rows($msg_query) > 0){
+				$error_name = "User Name already taken <br>";
+			}
+		}
+
+		if($email){
+			$msg_sql2 = "SELECT * FROM user WHERE email = '$email';";
+			$msg_query2 = mysqli_query($conn, $msg_sql2);
+			if(mysqli_num_rows($msg_query2) > 0){
+				$error_email = "Email already taken";
+			}
+		}
+
+		$verify_sql ="SELECT * FROM user WHERE user_name = '$name' or email = '$email';";
+		$verify_query = mysqli_query($conn, $verify_sql);
+		$verify_count = mysqli_num_rows($verify_query);
+
+		if($verify_count == 0){
+			$insert = "INSERT INTO `user` (`user_name`, `email`, `password`) VALUES ('$name', '$email', '$password'); ";
+			$query = mysqli_query($conn, $insert);
+			if($query == true){
+				header('Location: index.php?page_data='.$name.'');
+				exit;
+			}else{
+				$register_error = "Something Wrong";
+			}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,43 +71,9 @@
               <div class="card-body px-5 py-5">
                 <h3 class="card-title text-left mb-3">Register</h3>
 				<?php
-					session_start();
-					include_once "db/db.php";
-					
-					if(isset($_POST["register"])){
-						$name = $_POST["username"];
-						$email = $_POST["email"];
-						$password = $_POST["password"];
-						$password = md5($password);
-						if($name){
-							$msg_sql = "SELECT * FROM user WHERE user_name = '$name';";
-							$msg_query = mysqli_query($conn, $msg_sql);
-							if(mysqli_num_rows($msg_query) > 0){
-								$error_name = "User Name already taken <br>";
-							} 
-						}
-						if($email){
-							
-							$msg_sql2 = "SELECT * FROM user WHERE email = '$email';";
-							$msg_query2 = mysqli_query($conn, $msg_sql2);
-							if(mysqli_num_rows($msg_query2) > 0){
-								$error_email = "Email already taken";
-							} 
-						}
-						$verify_sql ="SELECT * FROM user WHERE user_name = '$name' or email = '$email' or user_name = '$name' and email = '$email';";
-						$verify_query = mysqli_query($conn, $verify_sql);
-						$verify_count = mysqli_num_rows($verify_query);
-
-						if($verify_count == 0){
-							$insert = "INSERT INTO `user` (`user_name`, `email`, `password`) VALUES ('$name', '$email', '$password'); ";
-							$query = mysqli_query($conn, $insert);
-							if($query == true){
-								header('Location: index.php?page_data='.$name.'');
-							}else{
-								echo "<h3>Something Wrong</h3>";
-							}
-						}
-					}	
+					if(isset($register_error)){
+						echo "<h3>".$register_error."</h3>";
+					}
 				?>
                 <form action="signup.php" method="post">
                     <div class="form-group">

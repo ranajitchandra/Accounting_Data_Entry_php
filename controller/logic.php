@@ -7,6 +7,7 @@
         $name = $_POST["username"];
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $password = md5($password);
         $insert = "INSERT INTO `user` (`user_name`, `email`, `password`) VALUES ('$name', '$email', '$password'); ";
         $query = mysqli_query($conn, $insert);
 			if($query == true){
@@ -88,7 +89,7 @@
 
     if(isset($_POST["office_submit"])){
         $details = $_POST["office_details"];
-        echo $project_id = $_POST["project_id"];
+        $project_id = $_POST["project_id"];
         $office_amount = $_POST["office_amount"];
         $office_date = $_POST["office_date"];
         $office_sql = "INSERT INTO `office_cost` (`details`, `project_id`, `office_amount`, `office_date`) VALUES ('$details', '$project_id', '$office_amount', '$office_date'); ";

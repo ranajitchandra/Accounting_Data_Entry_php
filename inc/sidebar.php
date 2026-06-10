@@ -3,8 +3,8 @@
           	<a class="sidebar-brand brand-logo" href="dashboard.php">
           	<h1 class="text-white">
 				<?php
-					$conn = mysqli_connect("localhost", "root", "", "banking");
-					
+					include_once __DIR__ . '/../db/db.php';
+
 					$u_sql = "SELECT * FROM dev_tool";
 					$u_query = mysqli_query($conn, $u_sql);
 					if($row=mysqli_fetch_assoc($u_query)){
@@ -16,7 +16,7 @@
           	</a>
           	<a class="sidebar-brand brand-logo-mini" href="Dashboard.php">
             
-            <h1 class="text-white text-decoration-none">S</h1></a>
+            <h1 class="text-white text-decoration-none">R</h1></a>
 
         </div>
 		<?php
