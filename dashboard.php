@@ -28,8 +28,8 @@
     // Get top projects by deposit amount
     $top_projects = mysqli_query($conn, "SELECT p.project_name, SUM(d.amount) as total_deposit FROM project p JOIN deposit d ON p.id = d.project_id GROUP BY p.id ORDER BY total_deposit DESC LIMIT 5");
 ?>
-  </head>
-  <body>
+    </head>
+  <body class="sidebar-fixed">
     <div class="container-scroller">
       <!-- sidebar -->
       <?php
