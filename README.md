@@ -2,7 +2,7 @@
 
 A simple **Expense Management System** built with **PHP & MySQL**, designed to manage projects, vendors, deposits, materials, and office costs.  
 
-🔗 **Live Demo:** [expense.infinityfree.me](http://expense.infinityfree.me/)  
+🔗 **Live Demo:** [expense.infinityfree.me](https://expense.site.je/)  
 🔗 **DB Relation** [https://i.ibb.co.com/xtv5Kj60/mysql-relation.png](https://i.ibb.co.com/xtv5Kj60/mysql-relation.png)  
 
 ---
@@ -58,6 +58,6 @@ A simple **Expense Management System** built with **PHP & MySQL**, designed to m
 
 Admin
 
-Email: rono@gmail.com
+Username: rono
 
 Password: 123456
