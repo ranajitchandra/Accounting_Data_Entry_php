@@ -2,7 +2,7 @@
 
 A simple **Expense Management System** built with **PHP & MySQL**, designed to manage projects, vendors, deposits, materials, and office costs.  
 
-🔗 **Live Demo:** [expense.infinityfree.me](https://expense.site.je/)  
+🔗 **Live Demo:** [https://expense.site.je/](https://expense.site.je/)  
 🔗 **DB Relation** [https://i.ibb.co.com/xtv5Kj60/mysql-relation.png](https://i.ibb.co.com/xtv5Kj60/mysql-relation.png)  
 
 ---
